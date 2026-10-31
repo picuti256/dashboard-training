@@ -3,6 +3,7 @@ import {
 	MdAttachMoney,
 	MdDashboard,
 	MdHelpCenter,
+	MdLogout,
 	MdOutlineSettings,
 	MdPeople,
 	MdShoppingBag,
@@ -72,7 +73,7 @@ export default function Sidebar() {
 				{menuItems.map((cat) => (
 					<li
 						key={cat.title}
-						className="text-textSoft-color font-bold text-xs my-2.5 mx-0"
+						className="text-textSoft-color font-bold my-0.5 mx-0"
 					>
 						<span>{cat.title}</span>
 						{cat.list.map((item) => (
@@ -84,6 +85,10 @@ export default function Sidebar() {
 					</li>
 				))}
 			</ul>
+			<button className="p-5 mx-1 flex items-center gap-2.5 cursor-pointer rounded-xl bg-none border-none w-full text-white hover:bg-[#2e374a]">
+				<MdLogout />
+				Logout
+			</button>
 		</div>
 	);
 }
